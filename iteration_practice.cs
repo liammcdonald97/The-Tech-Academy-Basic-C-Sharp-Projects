@@ -145,14 +145,16 @@ namespace iteration_basic_project
 
             //Console.ReadLine();
 
+            //Create a list of strings that has at least two identical strings in the List. Create a foreach loop that evaluates each item in the list, and displays
+            //a message showing the string and whether or not it has already appeared in the list.
             List<string> states = new List<string> { "PA", "CA", "PA", "OH" };
-            foreach (string input in states)
-            {
-                Console.WriteLine(input);
-                Console.WriteLine(states.Count);
+            bool containsDuplicates = (states.Count != states.Distinct().Count());
+                foreach (string input in states)
                 
-            }
+                {                                            
+                    Console.WriteLine(input, containsDuplicates);
 
+                }
             Console.ReadLine();
 
         }
